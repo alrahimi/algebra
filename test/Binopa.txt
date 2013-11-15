@@ -1,0 +1,7 @@
+julia> import algebraic
+
+julia> import algebraic.Binopa
+
+julia> a=Binopa(1)
+Binopa(1)
+

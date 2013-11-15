@@ -1,0 +1,24 @@
+
+ulia> import algebraic.Algebraic
+
+ulia> subtypes(Algebraic)
+-element Array{Any,1}:
+Binop{T}
+-----------------
+the following doesnt work as intended (it iherits only from the first type):
+abstract FieldAbs {T} <: GroupAdditive {T},GroupMultipicative {T}
+
+This is how I verified in console:
+
+julia> import algebraic.GroupAdditive
+
+julia> subtypes(GroupAdditive)
+2-element Array{Any,1}:
+ FieldAbs{T}
+ Groupa{T}
+
+julia> import algebraic.GroupMultipicative
+
+julia> subtypes(GroupMultipicative)
+1-element Array{Any,1}:
+ Groupm{T}
